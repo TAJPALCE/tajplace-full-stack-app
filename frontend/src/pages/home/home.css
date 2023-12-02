@@ -1,12 +1,21 @@
-.homeContainer{
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
+/* 
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500&display=swap');
+  .homeTitle{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #1d1d1dbe;
+    letter-spacing: 1.99px;
+    font-family: 'DynaPuff', cursive;
 
-.homeTitle{
-  width: 1024px;
-  font-size: 20px;
-}
+  }
+  .homeTitle::after{
+    content: " ";
+    background: #ffa400;
+    width: 20%;
+    height: 5px; 
+    position: absolute; 
+    bottom: -10px;
+    left: 50%; 
+    border-radius:30px 20px 10px 20px;
+    transform: translateX(-50%);
+  } */

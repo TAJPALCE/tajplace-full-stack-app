@@ -1,0 +1,19 @@
+.headeMain{
+    height: 100vh;
+    background-image: linear-gradient( #0000003b, #302f2f67 ),
+     url('../../img/home3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+}
+
+@media only screen and (max-width: 468px){
+    .headeMain{
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        background-size: center;
+        background-repeat: none;
+    }
+}

@@ -1,0 +1,212 @@
+.header{
+    background-size: cover;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    padding: 1.77rem;
+    position: relative;
+}
+.headerTitle{
+  margin-top: 30px;
+}
+.headerContainer{
+    width: 100%;
+    margin: 20px 0px 100px 0px;
+}
+.headerContainer.listmode{
+    margin: 20px 0px 10px 0px;
+}
+.headerList{
+    display: flex;
+    gap: 40px;
+}
+.heraderListItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.heraderListItem.active{
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 20px;
+}
+.headerDesc {
+    margin: 20px 0px;
+  }
+  .headerListItem{
+    /* background-color: #ffa400; */
+    border: 1px solid #ffa400;
+    color: #ffa400;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: .88rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+.sticker{
+  font-size: 3em;
+  background-image: url('../../img/profile.png');
+  -webkit-background-clip: text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:text 9.4s linear infinite;
+}
+@keyframes text {
+  from {background-position: 0% 50%;}
+  to{background-position: 100% 100%;}
+}
+  .headerBtn {
+    background-color: #ffa400;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+  }
+  .headerDisablebtn {
+    background-color: #6b6b6b;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    cursor:pointer;
+  }
+
+.headerSearch{
+    height: 60px;
+    background-color: #fff;
+    border: 3px solid #febb02;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    max-width: 1080px;
+}
+.headerIcon {
+    color: lightgray;
+}
+.headerSearchItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 4;
+}
+  
+.headerSearchInput {
+    border: none;
+    outline: none;
+}
+  
+.headerSearchText {
+    color: lightgray;
+    cursor: pointer;
+}
+.date{
+    position: absolute;
+    top: 50px;
+    z-index: 4;
+}
+
+.options {
+    z-index: 2;
+    position: absolute;
+    top: 50px;
+    background-color: white;
+    color: gray;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  }
+  
+  .optionItem {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+  
+  .optionCounter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: black;
+  }
+  
+  .optionCounterButton {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #0071c2;
+    color: #0071c2;
+    cursor: pointer;
+    background-color: white;
+  }
+  
+  .optionCounterButton:disabled {
+    cursor: not-allowed;
+  }
+  
+.optionCounterNumber{
+  /* border: 1px solid black; */
+  width: 20px;
+}
+  /* responsive css */
+  @media only screen and (max-width: 768px){
+    .header{
+      height: 170vh;
+      margin-bottom: 20px;
+    }
+    .headerList{
+      display: flex;
+      justify-content: flex-start;
+      align-items: start;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 1.1rem;
+    }
+    .headerSearch{
+      display: flex;
+      width: 85%;
+      height: 35%;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      gap: 60px;
+    }
+    .headerSearchItem{
+      width: 100%;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      border: 0.2px solid #9b9b9b2c;
+      padding: 10px;
+    }
+    .date{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 180px;
+      left: 0;
+      z-index: 4;
+      background-color: #ffa400 !important;
+      color: #000;
+      height: 400px;
+      width: 100%;
+  }
+    .options{
+      top: 20px;
+      background-color: #ffa400 !important;
+      color: #000;
+    }
+  }

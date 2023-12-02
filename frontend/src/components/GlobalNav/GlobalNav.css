@@ -1,0 +1,63 @@
+#navbarBg{
+    background-color: #193b53c5;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+}
+#nabvarNotColor{
+    background: #0071c2;
+    color: red !important;
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+}
+.navbar__toggler{
+    background-color: #ffffff00;
+    color: #ffffff !important;
+    padding: 4px 10px;
+    border-radius: 5px;
+    display: none;
+}
+.navbar-toggler-icon{
+    background-color: #000;
+    color: #fff !important;
+}
+.logo{
+    transition: all 0.5s ease-in-out;
+    padding: 4px 10px;
+}
+.logo:hover{
+    background-color: #fff;
+    border-radius: 35px 35px 35px 5px;
+    color: #000000c5 !important;
+    padding: 4px 10px;
+}
+#home{
+    background-color: #fff !important;
+    border-radius: 30px 30px 30px 5px;
+    color: #000000c5 !important;
+    margin-right: 1rem;
+}
+#Gnav-items{
+    border-radius: 10px 10px 10px 10px;
+    color: #fff !important;
+    margin-right: 10px;
+    transition: all 0.5s ease-in-out;
+    font-size: 0.88rem;
+
+}
+
+#Gnav-items:hover{
+    background-color: #fff;
+    border-radius: 30px 30px 30px 5px;
+    color: #000000c5 !important;
+}
+
+
+@media only screen and (max-width: 468px){
+    .navbar__toggler{
+        background-color: #ffffff00;
+        color: #ffffff !important;
+        padding: 4px 10px;
+        border-radius: 5px;
+    }
+}

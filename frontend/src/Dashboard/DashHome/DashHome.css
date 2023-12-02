@@ -1,0 +1,36 @@
+
+.welcome__text{
+    position: absolute;
+    left: 20rem;
+    top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 600;
+    color: #777;    
+}
+
+.welcome__title::before{
+    content: " ";
+    width: 10px;
+    height: 30px;
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    background-color: #ffa400;
+}
+
+@media only screen and (max-width: 468px){
+    .welcome__text{
+        position: absolute;
+        left: 6rem;
+        top: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-weight: 600;
+        color: #777;    
+    } 
+}

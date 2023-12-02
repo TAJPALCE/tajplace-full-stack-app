@@ -1,0 +1,115 @@
+.about{
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+}
+.about .about__gif{
+    width: 100%;
+    height: 100vh;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden
+}
+.about__gif .gif{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80%;
+}
+.about__us{
+    height: 70vh;
+}
+.abtCol__right{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+
+}
+.abtCol__right .abtColrgt__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px ;
+}
+.abtCom__review{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    position: relative;
+}
+.abtAlrt__img{
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+    position: relative;
+}
+.abt__overlay{
+    position: absolute;
+    top: 4rem;
+    left: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.com__rv{
+    width: 25%;
+}
+.abt__overlay .abt__overlayText{
+    color: #fff;
+}
+.abt__Values{
+    width: 100%;
+    height: 80%;
+    margin-bottom: 1em;
+}
+.abtValues__img{
+    width: 100%;
+    margin: 1rem;
+}
+
+@media only screen and (max-width: 468px){
+    .about__gif{
+        width: 100%;
+        height: 100vw;
+      
+    }
+    .about__us{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 2rem;  
+        padding: 1rem; 
+    }
+    .abtCom__review{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        margin: .7rem;
+    }
+    .abt__overlay{
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .abt__overlayText{
+        font-size: .77em;
+        margin-right: 1rem;
+    }
+    .com__rv{
+        width: 40%;
+    }
+    .abtVlue__left{
+        padding: 1rem;
+    }
+}

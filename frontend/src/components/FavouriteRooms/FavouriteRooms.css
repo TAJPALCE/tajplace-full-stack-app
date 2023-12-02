@@ -1,0 +1,122 @@
+.favouriteRooms{
+    width: 100%;
+    height: 60vh;
+    background-color: #FFFFFF;
+}
+.fvroom{
+    width: 100%;
+    height: auto;
+}
+.col-left-fvrt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow:  20px 20px 60px #d4d4d4be,
+    -20px -20px 60px #ffffff; 
+    transition: all 0.5s ease-in-out
+}
+.col-left-fvrt .fvrtImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+}
+.col-left-fvrt:hover .fvrtImg{
+    transform: scale(1.4);
+}
+.col-left-text{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 90%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e0dcdc7c;
+}
+.col-left-text .fvrt-para{
+    font-weight: 600;
+    color: #000000d2;
+    margin-top: 5px;
+}
+.fvrt-text{
+    margin-top: -15px;
+    font-weight: 500;
+}
+
+/* column right /////////////////////////////////// */
+
+.fvrt-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+}
+
+ .fvt-right-img{
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    width: 18.43rem;
+    height: 10.53rem;
+    border-radius: 5px;
+    box-shadow:  20px 20px 60px #d6d6d6ce,
+    -20px -20px 60px #ffffff; 
+    transition: all 0.5s ease-in-out
+}
+.fvt-right-img:hover .rightimg{
+    transform: scale(1.5);
+}
+.rightimg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+.fvrt-right-text{
+    position: absolute;
+    left: 5px;
+    bottom: 10px;
+    width: 90%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    background-color: #c4c4c479;
+    color: #000000d2;
+    font-weight: 600;
+}
+
+
+/* responsive styles  /////////////////////////// */
+@media only screen and (max-width: 768px){
+    .favouriteRooms{
+        width: 100%;
+        height: 100%;
+    }
+    .fvrt-right{
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        font-display: column;
+        width: 100%;
+        height: 100%;
+        margin-top: 2rem;
+    }
+    .fvrt-right .fvt-right-img{
+        width: 100%;
+    }
+}

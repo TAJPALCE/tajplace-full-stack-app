@@ -1,0 +1,15 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: berkshireswash-regular
+font link: https://fonts.google.com/specimen/Berkshire+Swash
+font author: Astigmatic
+font author site: http://www.astigmatic.com/
+
+
+
+fontColor: {"hex":"#FFA215"}
+bgColor: {"hex":"transparent"}
+
+
+      

@@ -1,0 +1,66 @@
+.navbar-toggler{
+  background-color: #0000007e; 
+}
+.navbar-brand{
+  color: #fff !important;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.nav__text{
+  font-size: .55rem;
+  letter-spacing: 2px;
+}
+.nav-link{
+  color: #fff !important;
+}
+.bars{
+  color: #fff !important;
+  font-size: 1.3rem;
+}
+.btn__nav{
+  border: none;
+  padding: 7px 15px;
+  background-color: #ffa400;
+  color: #fff;
+  border-radius:5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: .86rem;
+}
+.btn-logout{
+  background-color:#ffffff00;
+  color: #fff !important;
+  border: none;
+  font-size: 1.1rem;
+}
+.nav-logo{
+  width: 5rem;
+}
+@media only screen and (max-width:468px){
+  .navcolor{
+    background-color: #ffffff42;
+  }
+  .nav-link, .navbar-brand{
+    color: #f37b0b !important;
+    font-weight: bold;
+  }
+  .navbar-toggler{
+    background-color: #000000cc;
+  }
+  .navbar-nav{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+/* 
+primary button color
+
+color: #ffa400 
+
+*/

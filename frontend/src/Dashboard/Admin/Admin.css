@@ -1,0 +1,308 @@
+.ad{
+    position: relative;
+    overflow-x: hidden;
+    z-index: 999;
+
+}
+.admin{
+    position: absolute;
+    left: 16rem;
+    top: 4rem;
+    width: 80%;
+    height: auto;
+    padding: 1rem;
+    border: 1px solid #444;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    border: 1px solid #c5c5c554;
+    box-shadow: 2px 4px 6px 2px #dededebf;
+    -webkit-box-shadow: 2px 4px 6px 2px rgba(241, 241, 241, 0.75);
+    -moz-box-shadow: 2px 4px 6px 2px #dededebf;
+}
+
+.title{
+    color: #4e4e4e !important;
+    font-weight: 700;
+    font-size: 1.33rem;
+    letter-spacing: 1px;
+}
+
+.teacherTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.firstTitle{
+    font-size: 1.11rem;
+}
+.scndTitle{
+    color:#928d90 ;
+    letter-spacing: 1px;
+}
+
+.adminDash{
+    width: 100%;
+}
+/* admin style */
+
+.Ttable{
+    border: 0.99px  #b4b1b391;
+    height: 100vh;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px 0px rgba(232,221,224,0.75);
+-webkit-box-shadow: 1px 1px 8px 0px rgba(232,221,224,0.75);
+-moz-box-shadow: 1px 1px 8px 0px rgba(232,221,224,0.75);
+}
+.entriTitle{
+    font-weight: 600 !important;
+}
+.Ttable .entriTitle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.thead{
+    color: #000000cb;
+}
+.tbody{
+    text-align: center;
+}
+.trow{
+    align-items: center !important;
+}
+.tdata{
+    /* color: #4b4b4be1; */
+    color: #888;
+    font-weight: 600;
+    text-align: center;
+    align-items: center !important;
+}
+.teacherImg{
+    widows: 2.55rem;
+    height: 2.55rem;
+    border-radius: 100%;
+    margin-right: .86rem;
+    object-fit: cover;
+    align-items: start;
+}
+.tableWrapprer{
+    border: 0.99px  #b4b1b391;
+    height: auto;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px 0px rgba(232,221,224,0.75);
+-webkit-box-shadow: 1px 1px 8px 0px rgba(232,221,224,0.75);
+-moz-box-shadow: 1px 1px 8px 0px rgba(232,221,224,0.75);
+}
+.tableWrapprer .starTitle{
+    font-weight: 600;
+    font-size: 1.23rem;
+    color: #000000cb;
+    letter-spacing: 0.5px;
+}
+
+
+/* admin Activity */
+.StuActivity{
+    border: 0.99px  #b4b1b391;
+    height: auto;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px 0px rgba(232,221,224,0.75);
+-webkit-box-shadow: 1px 1px 8px 0px rgba(232,221,224,0.75);
+-moz-box-shadow: 1px 1px 8px 0px rgba(232,221,224,0.75);
+}
+.StuTitle{
+    font-weight: 600;
+    font-size: 1.23rem;
+    color: #000000cb;
+    letter-spacing: 0.5px;
+}
+.circle {
+    position: relative; 
+    border: 2px solid #19AFFB; 
+    border-radius: 100%; 
+    width: 20px; 
+    line-height: 20px; 
+    text-align: center; 
+    margin-top: 50px; 
+    background-color: #19AFFB; 
+    z-index: 2;
+}
+
+.circle:first-child {
+    margin-top: 0;
+}
+
+.circle:before {
+    position: absolute; 
+    border: 1px solid #19AFFB; 
+    width: 0; height: 50px; 
+    display: block; content: ''; 
+    left: 50%; z-index: 1; top: -54px; 
+    margin-left: -1px;
+}
+
+.circle:first-child:before {
+    display: none;
+}
+
+.StuActivityPoint{
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+}
+.firstPoint{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 1rem;
+}
+.pointTitle{
+    font-weight: 600;
+    color: #888;
+}
+.PointPara{
+    font-weight: 600;
+}
+.PointPara .pointmid{
+    color: #888;
+}
+
+.action{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btnEdit{
+    border: none;
+    padding: 5px 6px;
+    background-color:#18AEFA;
+    color: #fff;
+    border-radius: 5px;
+}
+.btnDelete{
+    border: none;
+    padding: 5px 7px;
+    background-color:#FFBC53;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+/*///////////////////////////////////////////////////// ADD ADMIN  //////////////////////////////////////////*/
+
+.TeacherAdd{
+    /* margin-top: 3rem; */
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+.title{
+    color: #010d13c9;
+    font-weight: 700;
+}
+
+.teacherTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.firstTitle{
+    font-size: 1.11rem;
+}
+.scndTitle{
+    color:#928d90 ;
+    letter-spacing: 1px;
+}
+.regImg{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Teacher add  */
+.Tadd{
+    border: 0.99px  #b4b1b391;
+    height:auto;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px 0px rgba(232,221,224,0.75);
+-webkit-box-shadow: 1px 1px 8px 0px rgba(232,221,224,0.75);
+-moz-box-shadow: 1px 1px 8px 0px rgba(232,221,224,0.75);
+
+}
+.bdtails{
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+}                        
+.line{
+    color: red;
+    width: 100px;
+    height: 2px;
+}
+.lgntails,.adrstails{
+    margin-top: 20px;
+}
+
+
+
+
+/* responsive style */
+@media only screen and (max-width:468px){
+    
+    .Tadd{
+        padding: 0;
+        box-shadow: none;
+    }
+    .fCount{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 2rem;
+    }
+    .fcontainer{
+        margin-bottom: 2rem;
+    }
+    .StuActivity{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px;
+        width: 100%;
+    }
+    .tableWrapprer{
+        display: flex;
+        justify-content: center;
+        align-items: center;flex-direction: column;
+        padding: 0px;
+        background-color: #fff;
+        box-shadow:none;
+        margin-left: 3rem;
+    }
+    .socialContainer{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 3rem;
+    }
+    .socialFacebook,.socialTwitter,.socialInsta{
+        margin-bottom: 1rem;
+    }
+}
