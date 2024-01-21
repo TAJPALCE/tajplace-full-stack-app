@@ -4,7 +4,7 @@
     align-items: start;
     flex-direction: column;
     width: 240px;
-    height: 118vh;
+    height: 120vh;
     /* overflow-y: scroll; */
     background-color: #333;
 }

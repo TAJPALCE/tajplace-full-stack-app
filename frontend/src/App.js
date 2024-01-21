@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import { AuthContext } from "./context/AuthContext";
@@ -32,7 +32,11 @@ import Contactus from "./Pages/Contactus/Contactus";
 import AllBookings from "./Dashboard/AllBookings/AllBookings";
 import Rooms from "./components/RoomsOne/RoomsOne";
 import ExtraServices from "./Dashboard/NewRoom/ExtraServices/ExtraServices.js";
-
+import BookingModal from "./components/Booking/BookingModal.js";
+import InnerHotelPhotos from "./Dashboard/NewRoom/InnerHotelPhotos/InnerHotelPhotos.js";
+import PaymentMethod from "./components/Booking/paymentMethod.js";
+import StripePayment from "./components/RoomsOne/stripPayment.js";
+import Completion from "./components/RoomsOne/completion.js";
 const App = () => {
   const ProtectedRoute = ({ children }) => {
     const { user } = useContext(AuthContext);
@@ -43,12 +47,30 @@ const App = () => {
   };
 
   const { token } = useContext(AuthContext);
-  // console.log(token);
+
+  // useEffect(() => {
+  //   window.addEventListener("beforeunload", removeLocalStorage);
+  //   return () => {
+  //     window.addEventListener("beforeunload", removeLocalStorage);
+  //   };
+  // }, []);
+
+  // const removeLocalStorage = () => {
+  //   localStorage.removeItem("selectedRooms");
+  //   localStorage.removeItem("selectedDates");
+  //   localStorage.removeItem("totalPrice");
+  //   localStorage.removeItem("totalRooms");
+  //   localStorage.removeItem("totalGuests");
+  //   localStorage.removeItem("numberOfDays");
+  // };
+
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/completion" element={<Completion />} />
+          <Route path="/extraService/:id" element={<BookingModal />} />
           <Route path="/allroom" element={<List />} />
           <Route path="/aboutbook" element={<About />} />
           <Route path="/hotels/:id" element={<Hotels />} />
@@ -57,6 +79,7 @@ const App = () => {
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/read/:id" element={<Single />} />
+          <Route path="/StripePayment" element={<StripePayment />} />
           <Route
             path="/dashboard/home"
             element={
@@ -105,6 +128,16 @@ const App = () => {
               </ProtectedRoute>
             }
           />
+
+          <Route
+            path="/innerHotelphotos"
+            element={
+              <ProtectedRoute>
+                <InnerHotelPhotos />
+              </ProtectedRoute>
+            }
+          />
+
           <Route
             path="/addArticles"
             element={

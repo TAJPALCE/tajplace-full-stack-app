@@ -9,6 +9,8 @@ const {
   updateRoomAvail,
   rooms,
   deleteBooked,
+  addFiles,
+  getRoomByUserIDBook,
 } = require("../controllers/rooms");
 
 // CREATE NEW ROOM
@@ -23,6 +25,8 @@ router.delete("/delete/:id", rooms);
 router.get("/getAllRooms", getAllRooms);
 // GET ROOM BY ID
 router.get("/getRoomByID/:id", getRoomByID);
+//ger room by user id booking
+router.get("/getRoomByUserIDBook/:userId", getRoomByUserIDBook);
 // BOOK ROOM WITH EXACT DATE BY ROOM ID Y ID
 router.put("/availability/:id", updateRoomAvail);
 

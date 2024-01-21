@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import GlobalNav from "../GlobalNav/GlobalNav";
 import axios from "axios";
-import { Navigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import rooOnejpg from "../../img/rooOnejpg.jpg";
 import one from "../../img/singleOne.jpg";
 import two from "../../img/singleTwo.jpg";
 import three from "../../img/singleThree.jpg";
 import four from "../../img/singleFour.jpg";
 import "../FavouriteRooms/FavouriteRooms.css";
-import { useNavigate } from "react-router-dom";
 import {
   Button,
   FormControl,
@@ -29,17 +28,14 @@ import {
 import Footer from "../Footer/Footer";
 import BookingModal from "../Booking/BookingModal";
 import { ToastContainer, toast } from "react-toastify";
-import SliderMedia from "./SliderMedia";
 
-const RoomsOne = () => {
+const AllRooms = () => {
   const [data, setData] = useState([]);
   const { id } = useParams();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        localStorage.setItem("roomId", id);
         const res = await axios.get(
           `http://localhost:5000/room/getRoomByID/${id}`
         );
@@ -74,7 +70,8 @@ const RoomsOne = () => {
     { _id: 4, title: "triple bed", quantity: 4 },
   ];
   const [selectedRooms, setSelectedRooms] = useState({});
-  const handleRoomSelect = (roomId, title, quantity) => {
+
+  const handleRoomSelect = (roomId, quantity) => {
     let quant = quantity - 1;
 
     // Retrieve existing selected rooms from local storage
@@ -94,7 +91,7 @@ const RoomsOne = () => {
       existingRooms[existingRoomIndex].quantity = quant;
     } else {
       // If the room doesn't exist, add a new entry to the array
-      existingRooms.push({ roomId, title, quantity: quant });
+      existingRooms.push({ roomId, quantity: quant });
     }
 
     // Save the updated array back to local storage
@@ -123,24 +120,21 @@ const RoomsOne = () => {
           return acc;
         }, {})
       );
-    } else {
-      setSelectedRooms({});
     }
   }, []);
-  // const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
   const handleOpenModal = () => {
     if (Object.keys(selectedRooms).length !== 0) {
-      navigate(`/extraService/${id}`);
-      // setModalOpen(true);
+      setModalOpen(true);
     } else {
-      // setModalOpen(false);
+      setModalOpen(false);
       notify();
     }
   };
 
-  // const handleCloseModal = () => {
-  //   setModalOpen(false);
-  // };
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
   const notify = () => toast("Please select the Room.", { type: "error" });
   const selectedRoom = localStorage.getItem("selectedRooms");
   console.log(selectedRoom, "selectedRoom");
@@ -169,7 +163,6 @@ const RoomsOne = () => {
   const { totalPrice, totalRooms, totalGuests } = calculateTotal();
 
   const totalGuest = localStorage.getItem("totalGuests");
-  console.log(selectedRoom, "???");
 
   return (
     <>
@@ -241,7 +234,6 @@ const RoomsOne = () => {
           miles from the accommodation. Distance in property description is
           calculated using © OpenStreetMap
         </div>
-
         <h4 className="bold"> Most popular facilities</h4>
         <div className="d-flex gap-3 mt-3 mb-5">
           <div className="">
@@ -257,7 +249,6 @@ const RoomsOne = () => {
             <FontAwesomeIcon icon={faUsers} /> Family rooms
           </div>
         </div>
-        <SliderMedia />
         <div className="pb-3">
           <h2>Room Details</h2>
           <h6 style={{ color: "red" }}>
@@ -295,7 +286,7 @@ const RoomsOne = () => {
                       <Select
                         value={selectedRooms[room._id]}
                         onChange={(e) =>
-                          handleRoomSelect(room._id, room.title, e.target.value)
+                          handleRoomSelect(room._id, e.target.value)
                         }
                       >
                         {[
@@ -320,10 +311,6 @@ const RoomsOne = () => {
             </tbody>
             <thead>
               <tr>
-                <th> Total Rooms: {totalRooms}</th>
-                <th> Total Guests: {totalGuests}</th>
-                <th> Total Price: {totalPrice} PKR</th>
-                <th> Total Days: {numberOfDays ? numberOfDays : ""}</th>
                 <th>
                   Reserve Your Room <br />{" "}
                   <Button
@@ -334,15 +321,20 @@ const RoomsOne = () => {
                     Book
                   </Button>{" "}
                 </th>
+
+                <th> Total Price: {totalPrice} PKR</th>
+                <th> Total Rooms: {totalRooms}</th>
+                <th> Total Guests: {totalGuests}</th>
+                <th> Total Days: {numberOfDays ? numberOfDays : ""}</th>
               </tr>
             </thead>
           </Table>
           <ToastContainer />
-          {/* <BookingModal isOpen={modalOpen} onClose={handleCloseModal} /> */}
+          <BookingModal isOpen={modalOpen} onClose={handleCloseModal} />
         </div>
       </div>
     </>
   );
 };
 
-export default RoomsOne;
+export default AllRooms;

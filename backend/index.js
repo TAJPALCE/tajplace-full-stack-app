@@ -1,8 +1,8 @@
-const express = require("express");
 const mongoose = require("mongoose");
-const app = express();
 const path = require("path");
+const express = require("express");
 const cors = require("cors");
+const app = express();
 const dotenv = require("dotenv");
 // const cookieParser = require('cookie-parser')
 dotenv.config();
@@ -14,7 +14,8 @@ const reviewRoute = require("./routes/review");
 const articleRoute = require("./routes/articles");
 const orderRoute = require("./routes/order");
 const roomFeatureRoute = require("./routes/roomFeature");
-
+const innerhotelRoute = require("./routes/InnerHotel");
+const paymentRoute = require("./routes/payment");
 mongoose
   .connect("mongodb://0.0.0.0:27017/hotel-room-database")
   .then(() => console.log("connected to mongodb"))
@@ -31,6 +32,9 @@ app.use("/review", reviewRoute);
 app.use("/article", articleRoute);
 app.use("/order", orderRoute);
 app.use("/roomFeature", roomFeatureRoute);
+app.use("/innerHotel", innerhotelRoute);
+app.use("/payment", paymentRoute);
+
 app.use((err, req, res, next) => {
   const errStatus = err.status || 500;
   const errMsg = err.message || "something went wrong";

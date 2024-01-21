@@ -96,11 +96,12 @@ const List = () => {
       <div className="listContainer">
         <div className="listWrapper">
           <div className="listSearch">
-            <h1 className="lsTitle">All Hotel Rooms Here </h1>
+            <h3 className="lsTitle">All Room Categories</h3>
             <div className="lsItem">
               <label className="text-info">i. Select the Room</label>
               <label>ii. If you're facing any issue in booking</label>
               <label>Just call us, we are here for your support</label>
+
               {/* <input placeholder={destination} type="text" /> */}
             </div>
             {/* <div className="lsItem">
@@ -120,9 +121,9 @@ const List = () => {
                 />
               )}
             </div> */}
-            <div className="lsItem">
+            <div className="lsIte">
               {/* <label>Options</label> */}
-              <div className="lsOptions">
+              <div className="lsOption">
                 {/* <div className="lsOptionItem">
                   <span className="lsOptionText">
                     Min price <small>per night</small>

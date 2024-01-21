@@ -52,6 +52,11 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
                   <i className="fa-solid fa-bed"></i> Rooms
                 </li>
               </Link>
+              <Link to="/innerHotelphotos" className="link">
+                <li>
+                  <i className="fa-solid fa-shield"></i> Inner Hotel photos
+                </li>
+              </Link>
               <Link to="/extraservices" className="link">
                 <li>
                   <i className="fa-solid fa-shield"></i> Extra services

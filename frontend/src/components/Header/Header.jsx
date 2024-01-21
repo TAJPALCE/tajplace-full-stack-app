@@ -335,7 +335,8 @@ const Header = ({ type }) => {
                     <button
                       type="button"
                       className="headerDisablebtn"
-                      onClick={notify}
+                      // onClick={notify}
+                      onClick={() => navigate("/login")}
                     >
                       Login
                     </button>

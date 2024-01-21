@@ -1,5 +1,13 @@
 const Room = require("../models/Room");
 const Hotel = require("../models/Hotels");
+const User = require("../models/User");
+const cloudinary = require("cloudinary").v2;
+
+cloudinary.config({
+  cloud_name: "dimh97csd",
+  api_key: "627913742987235",
+  api_secret: "RUDvEY5HaUJomc6_LUgg4LwClac",
+});
 
 // CREATE NEW ROOM
 const createRoom = async (req, res, next) => {
@@ -98,6 +106,34 @@ const getRoomByID = async (req, res, next) => {
     next(err);
   }
 };
+
+//get room by id booking check
+
+const getRoomByUserIDBook = async (req, res) => {
+  try {
+    if (!req.params.userId) {
+      return res.status(400).json({ message: "User ID is undefined" });
+    }
+    const roomsBookedByUser = await Room.find({
+      "currentbookings.userid": req.params.userId,
+    });
+
+    const filteredRooms = roomsBookedByUser.map((room) => {
+      const { currentbookings } = room;
+      return {
+        currentbookings: currentbookings.filter(
+          (booking) => booking.userid === req.params.userId
+        ),
+      };
+    });
+
+    res.status(200).json({ roomsBookedByUser: filteredRooms });
+  } catch (error) {
+    console.log(error);
+    // res.status(500).json({ message: "something went wrong" });
+  }
+};
+
 // BOOK ROOM WITH EXACT DATE BY ROOM ID
 const updateRoomAvail = async (req, res, next) => {
   try {
@@ -124,4 +160,5 @@ module.exports = {
   updateRoomAvail,
   rooms,
   deleteBooked,
+  getRoomByUserIDBook,
 };

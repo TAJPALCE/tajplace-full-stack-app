@@ -1,6 +1,6 @@
 .footer{
   background-color: #222222;
-  height: 100vh;
+  /* height: 100vh; */
   /* padding: 3.77rem; */
   overflow: hidden;
 }
@@ -91,7 +91,7 @@
 .copyright{
   /* border: 1px solid red; */
   width: 100%;
-  height: 100px;
+  min-height: 100px;
   background-color: #1E1E1E;
   display: flex;
   justify-content: center;

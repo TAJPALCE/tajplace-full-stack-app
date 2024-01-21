@@ -1,19 +1,27 @@
-const router = require('express').Router()
+const router = require("express").Router();
 const {
-    createHotels,updateHotels,deleteHotels,getHotelsbyId,getAllHotels,getHotelsByCity,countByType, list,getHotelRooms
-} = require('../controllers/hotels')
-const { verifyAdmin } = require('../utils/Verifytoken');
+  createHotels,
+  updateHotels,
+  deleteHotels,
+  getHotelsbyId,
+  getAllHotels,
+  getHotelsByCity,
+  countByType,
+  list,
+  getHotelRooms,
+} = require("../controllers/hotels");
+const { verifyAdmin } = require("../utils/Verifytoken");
 
 // ADDING HOTELS
-router.post('/add', verifyAdmin, createHotels)
+router.post("/add", verifyAdmin, createHotels);
 // UPDATE HOTELS
-router.put('/updateHotels/:id',verifyAdmin, updateHotels)
+router.put("/updateHotels/:id", verifyAdmin, updateHotels);
 // DELETE HOTELS
-router.delete('/delete/:id',verifyAdmin, deleteHotels)
+router.delete("/delete/:id", verifyAdmin, deleteHotels);
 // GET ALL HOTELS
-router.get('/allhotels',getAllHotels)
+router.get("/allhotels", getAllHotels);
 // GET HOTELS BY ID
-router.get('/gethotel/:id', getHotelsbyId)
+router.get("/gethotel/:id", getHotelsbyId);
 // GET HOTEL BY CITY
 router.get("/countByCity", getHotelsByCity);
 // GET HOTEL NUMBER BY CITY

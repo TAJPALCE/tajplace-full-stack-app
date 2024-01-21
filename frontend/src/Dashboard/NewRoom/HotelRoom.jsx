@@ -39,7 +39,7 @@ const HotelRoom = () => {
     }
   }, [data]);
   console.log(hotelId, ">>>>>>>>>>>>>>>>>");
-  const [rooms, setRooms] = useState("");
+  const [roomQuantity, setRoomQuantity] = useState("");
   const navigate = useNavigate();
   const config = {
     headers: { token: `Bearer ${JSON.parse(localStorage.getItem("token"))}` },
@@ -48,12 +48,11 @@ const HotelRoom = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    const ro = rooms.split(",").map((room) => ({ number: room }));
+    // const ro = rooms.split(",").map((room) => ({ number: room }));
 
     const data = new FormData();
     data.append("file", file);
     data.append("upload_preset", "yasinCloud");
-    // const uploadRes = await axios.post("https://api.cloudinary.com/v1_1/rahatdev1020/image/upload", data)
     const uploadRes = await axios.post(
       "https://api.cloudinary.com/v1_1/hotelroombooking/image/upload",
       data
@@ -64,7 +63,7 @@ const HotelRoom = () => {
       price,
       maxPeople,
       desc,
-      roomNumbers: ro,
+      quantity: roomQuantity,
       rating,
       ac,
       img: url,
@@ -164,14 +163,15 @@ const HotelRoom = () => {
                         </div>
                         <div className="col-md-6">
                           <label htmlFor="inputCity" className="form-label">
-                            Room Numbers
+                            Room Quantity
                           </label>
                           <input
                             type="text"
                             className="form-control"
                             id="inputCity"
-                            onChange={(e) => setRooms(e.target.value)}
-                            placeholder="room numbers"
+                            value={roomQuantity}
+                            onChange={(e) => setRoomQuantity(e.target.value)}
+                            placeholder="0"
                           />
                         </div>
 
